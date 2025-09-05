@@ -320,6 +320,11 @@ class MoviesSchema(DatabaseSchema):
 
 # Database Creator
 class DatabaseCreator:
+    def __init__(self):
+        self.notion_service = NotionService()
+        self.required_databases = {
+            # Empty for now - all databases already exist
+        }
     
     def initialize_databases(self) -> Dict[str, Any]:
         """Initialize all required databases, creating missing ones"""
