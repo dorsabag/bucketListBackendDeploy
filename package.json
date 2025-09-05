@@ -1,0 +1,11 @@
+{
+  "name": "bucket-list-backend",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "python -m uvicorn server:app --host 0.0.0.0 --port $PORT"
+  },
+  "dependencies": {},
+  "engines": {
+    "python": "3.11.x"
+  }
+}
