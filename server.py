@@ -322,18 +322,6 @@ class MoviesSchema(DatabaseSchema):
 class DatabaseCreator:
     def __init__(self):
         self.notion_service = NotionService()
-        self.required_databases = {
-            "books": {
-                "title": "📚 Books Bucket List",
-                "schema_class": BooksSchema,
-                "env_var": "BOOKS_DB_ID"
-            },
-            "movies": {
-                "title": "🎬 Movies Bucket List", 
-                "schema_class": MoviesSchema,
-                "env_var": "MOVIES_DB_ID"
-            }
-        }
     
     def initialize_databases(self) -> Dict[str, Any]:
         """Initialize all required databases, creating missing ones"""
